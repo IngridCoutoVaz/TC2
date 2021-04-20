@@ -10,9 +10,7 @@ import {listaProdutosCadastrados} from "../listaProdutos";
 export class ProdutoComponent implements OnInit {
 
   listaProdutos : Produto[] = listaProdutosCadastrados;
-
-
-
+  
   constructor() { }
 
   ngOnInit(): void {

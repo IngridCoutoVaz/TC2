@@ -13,11 +13,12 @@
 </div>
 -->
 
-<h2>Lista de produtos cadastrados</h2>
+<h2>Lista de produtos cadastrados</h2> 
 <ul>
     <li *ngFor="let prod of listaProdutos">
-        <span>{{prod.name}}</span>, por {{prod.price | currency}}
-        <span *ngIf="prod.vegan"><b> - É vegano!!</b></span> 
-        <span *ngIf="!prod.vegan"><b> - Não é vegano :(</b></span> 
+        <span>{{prod.name}}</span>: {{prod.price | currency}}
+        <span *ngIf="prod.vegan"><b> - Sem origem animal - </b></span> 
+        <span *ngIf="!prod.vegan"><b> - Origem animal - </b></span> 
+        <span> Quantidade disponível: {{prod.amount}}</span>
     </li>
 </ul>

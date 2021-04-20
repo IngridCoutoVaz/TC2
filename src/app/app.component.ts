@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Loja de produtos baratex';
-  developer : string = "Tiago";
+  title = 'Loja de produtos';
+  developer : string = "Ingrid";
 }
