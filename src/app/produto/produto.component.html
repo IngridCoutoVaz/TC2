@@ -16,9 +16,14 @@
 <h2>Lista de produtos cadastrados</h2> 
 <ul>
     <li *ngFor="let prod of listaProdutos">
-        <span>{{prod.name}}</span>: {{prod.price | currency}}
-        <span *ngIf="prod.vegan"><b> - Sem origem animal - </b></span> 
-        <span *ngIf="!prod.vegan"><b> - Origem animal - </b></span> 
-        <span> Quantidade disponível: {{prod.amount}}</span>
+        <span>{{prod.count}} {{prod.number}} - {{prod.name}}</span>: {{prod.price | currency}}
+        <span *ngIf="prod.vegan"><b> - Sem origem animal</b></span> 
+        <span *ngIf="!prod.vegan"><b> - Origem animal</b></span> 
+        <ul *ngFor="let qtd of listaQuantidade">
+            <li *ngIf ="prod.count == qtd.numberProduct">
+                <span>Quantidade: </span>
+                <span *ngIf="qtd.amount >= 0"><b> {{qtd.amount}} </b></span>
+            </li>
+        </ul>
     </li>
 </ul>
